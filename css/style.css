@@ -7,7 +7,9 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,18 +39,18 @@ body {
     position: relative;
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 4rem;
 }
 
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -63,19 +65,18 @@ body {
     backface-visibility: hidden;
 }
 
-.heading-title, .heading-sub {
+.heading-primary--title, .heading-primary--sub {
     display: block;
-    
 }
 
-.heading-title {
+.heading-primary--title {
     font-size: 7rem;
     letter-spacing: 3.5rem;
     font-weight: 400;
     animation: moveInLeft 1s ease-out;
 }
 
-.heading-sub {
+.heading-primary--sub {
     font-size: 2rem;
     letter-spacing: 2rem;
     animation: moveInRight 1s ease-out;
@@ -136,7 +137,7 @@ body {
     position: relative;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out 0.2s;
     animation-fill-mode: backwards;
 }
@@ -151,7 +152,7 @@ body {
     box-shadow: 0 .5rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
     color: #777777;
     background: #ffffff;
 }
@@ -169,7 +170,7 @@ body {
     transition: all .3s;
 }
 
-.btn-white::after {
+.btn--white::after {
     background: #ffffff;
 }
 
