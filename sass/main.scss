@@ -7,12 +7,13 @@ Dark green: #28b485
 
 */
 
-$color-prmary: #55c57a;
+$color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000;
 
 *,
 *::after,
@@ -44,25 +45,25 @@ body {
     background-position: top;
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
     position: relative;
-}
 
-.header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
-
-.header__logo {
-    height: 4rem;
-}
-
-
-.header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    
+    &__logo {
+        height: 4rem;
+    }
+    
+    
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 }
 
 .heading-primary {
@@ -70,24 +71,24 @@ body {
     text-transform: uppercase;
     /* Arreglar pequeño rebote en las animaciones */
     backface-visibility: hidden;
-}
 
-.heading-primary--title, .heading-primary--sub {
-    display: block;
-}
-
-.heading-primary--title {
-    font-size: 7rem;
-    letter-spacing: 3.5rem;
-    font-weight: 400;
-    animation: moveInLeft 1s ease-out;
-}
-
-.heading-primary--sub {
-    font-size: 2rem;
-    letter-spacing: 2rem;
-    animation: moveInRight 1s ease-out;
-    margin-bottom: 6rem;
+    &--title, &--sub {
+        display: block;
+    }
+    
+    &--title {
+        font-size: 7rem;
+        letter-spacing: 3.5rem;
+        font-weight: 400;
+        animation: moveInLeft 1s ease-out;
+    }
+    
+    &--sub {
+        font-size: 2rem;
+        letter-spacing: 2rem;
+        animation: moveInRight 1s ease-out;
+        margin-bottom: 6rem;
+    }
 }
 
 @keyframes moveInLeft {
@@ -142,46 +143,46 @@ body {
     display: inline-block;
     transition: all .2s;
     position: relative;
-}
 
-.btn--animated {
-    animation: moveInBottom .5s ease-out 0.2s;
-    animation-fill-mode: backwards;
-}
+    &--animated {
+        animation: moveInBottom .5s ease-out 0.2s;
+        animation-fill-mode: backwards;
+    }
+    
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
-.btn:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
+        &::after {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+    
+    &:active {
+        transform: translateY(1rem);
+        box-shadow: 0 .5rem 2rem rgba($color-black, 0.2);
+    }
+    
+    &--white {
+        color: $color-grey-dark;
+        background: $color-white;
 
-.btn:active {
-    transform: translateY(1rem);
-    box-shadow: 0 .5rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.btn--white {
-    color: $color-grey-dark;
-    background: $color-white;
-}
-
-.btn::after {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .3s;
-}
-
-.btn--white::after {
-    background: $color-white;
-}
-
-.btn:hover::after {
-    transform: scale(1.5);
-    opacity: 0;
+        &::after {
+            background: $color-white;
+        }
+    }
+    
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .3s;
+    }
 }
