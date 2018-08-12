@@ -13,6 +13,9 @@ $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 
 $color-grey-dark: #777;
+$color-grey-dark-2: #999;
+
+
 $color-white: #fff;
 $color-black: #000;
 
@@ -28,4 +31,8 @@ $gutter-horizontal: 6rem;
 
 $shadow-one: 0 1.5rem 4rem rgba($color-black, .15);
 $shadow-two: .5rem 1rem 2rem rgba($color-black, .2);
-$shadow-three: 0 .5rem 2rem rgba($color-black, 0.2);
+$shadow-three: 0 1rem 2rem rgba($color-black, 0.1);
+
+// RADIUS
+
+$border-radius: 3px;

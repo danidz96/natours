@@ -1,5 +1,4 @@
 .card {
-
     // Functionality
     perspective: 150rem;
     -moz-perspective: 150rem;
@@ -14,7 +13,7 @@
         left: 0;
         width: 100%;
         backface-visibility: hidden;
-        border-radius: 3px;
+        border-radius: $border-radius;
         overflow: hidden;
         box-shadow: $shadow-one;
 
