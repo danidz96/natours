@@ -13,6 +13,8 @@ $breakpoint opciones:
 - tab-land
 - big-desktop 
 
+ORDEN: Base + typography > general layput + grid > page layout > components
+
 1em = 16px
 */
 *,
@@ -36,6 +38,9 @@ html {
 
 body {
   padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 @keyframes moveInLeft {
   0% {
@@ -105,11 +110,18 @@ body {
     letter-spacing: 3.5rem;
     font-weight: 400;
     animation: moveInLeft 1s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--title {
+        letter-spacing: 1rem;
+        font-size: 6rem; } }
   .heading-primary--sub {
     font-size: 2rem;
     letter-spacing: 2rem;
     animation: moveInRight 1s ease-out;
     margin-bottom: 6rem; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -121,6 +133,12 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 2.7rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.3rem; } }
   .heading-secondary:hover {
     transform: skewY(4deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
