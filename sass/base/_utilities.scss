@@ -2,8 +2,20 @@
 
 .u-mb-sm { margin-bottom: 1.5rem; }
 .u-mb-md { margin-bottom: 4rem; }
-.u-mb-lg { margin-bottom: 8rem; }
+.u-mb-lg {
+    margin-bottom: 8rem; 
+
+    @include respond(tab-port) {
+        margin-bottom: 5rem !important;
+    }
+}
 
 .u-mt-huge { margin-top: 10rem; }
-.u-mt-lg { margin-top: 8rem; }
+.u-mt-lg { 
+    margin-top: 8rem; 
+
+    @include respond(tab-port) {
+        margin-top: 5rem !important;
+    }
+}
 .u-mt-md { margin-top: 4rem; }
